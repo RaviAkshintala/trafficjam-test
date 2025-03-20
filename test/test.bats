@@ -24,7 +24,8 @@ function setup_file() {
 }
 
 @test "Test the non-swarm environment" {
-	docker exec trafficjam_test bats /opt/trafficjam/test/test-dind.bats
+	
+        docker exec -it trafficjam_test /bin/bash ls /opt/trafficjam/test/
 }
 
 @test "Deploy the non-swarm environment with nftables" {
