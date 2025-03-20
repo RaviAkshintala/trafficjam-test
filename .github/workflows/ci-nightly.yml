@@ -14,6 +14,7 @@ jobs:
         run: |
           shellcheck trafficjam-functions.sh
           shellcheck -x trafficjam.sh
+
       - name: Install shfmt
         shell: bash
         run: |
@@ -26,7 +27,7 @@ jobs:
 
       - name: Install bats
         run: |
-          sudo git clone --depth 1 --branch v1.8.1 https://github.com/bats-core/bats-core.git /opt/bats
+          sudo git clone --depth 1 --branch v1.11.1 https://github.com/bats-core/bats-core.git /opt/bats
           sudo /opt/bats/install.sh /usr/local
           
       - name: Run test suite
